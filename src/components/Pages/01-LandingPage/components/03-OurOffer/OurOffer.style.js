@@ -4,13 +4,12 @@ export const OurOfferStyled= styled.section`
   height: 600px;
   width: 100%;
   background-color: #8000FF;
-
   & .OurOffer{
     display: flex;
     width: 1200px;
     height: 100%;
     margin: 0 auto;
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1190px) {
       width: 100%;
     }
     &__Left{

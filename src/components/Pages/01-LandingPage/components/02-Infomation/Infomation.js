@@ -2,7 +2,7 @@ import { InformationStyled } from "./Information.style";
 import FamilyImg from "../../../../images/family.png"
 const Information = () => {
   return ( 
-    <InformationStyled>
+    <InformationStyled data-aos="fade-right">
       <section className="Info__Left">
         <img alt="" width="100%" srcset={FamilyImg} />
       </section>

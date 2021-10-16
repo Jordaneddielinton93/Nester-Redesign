@@ -3,9 +3,9 @@ import { OurOfferStyled } from "./OurOffer.style";
 import Button from "../../../../Buttons/Buttons"
 const OurOffer = () => {
   return ( 
-    <OurOfferStyled>
-      <div className="OurOffer">
-        <section className="OurOffer__Left">
+    <OurOfferStyled data-aos="fade-up">
+      <div className="OurOffer" >
+        <section className="OurOffer__Left" >
           <h1 className="OurOffer__Left--title" >Our Offer</h1>
           <h3 className="OurOffer__Left--subtitle">
             We aim to simplify property investment…

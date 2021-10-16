@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const NavBarStyled= styled.nav`
   position: absolute;
   top: 0;
-  width: 100vw;
+  left: 0;
+  width: 100%;
   height:80px;
   background-color: #504c5e;
   z-index: 20;
@@ -13,7 +14,7 @@ export const NavBarStyled= styled.nav`
     width: 1200px;
     height: 100%;
     margin: 0px auto;
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1197px) {
       width: 100%;
       
     }

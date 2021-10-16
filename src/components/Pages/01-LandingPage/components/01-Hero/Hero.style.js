@@ -9,7 +9,7 @@ export const HeroStyled = styled.div`
   min-height: 90vh;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 80px;
+  padding-top: 80px;
   & .Hero-title{
     width: 100%;
     height: 300px;

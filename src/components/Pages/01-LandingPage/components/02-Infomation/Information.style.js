@@ -4,9 +4,9 @@ export const InformationStyled = styled.section`
     display: flex;
   width: 1200px;
   margin: 0  auto;
-  @media only screen and (max-width: 1200px) {
-    width: 100%;
-  }
+  @media only screen and (max-width: 1190px) {
+      width: 100%;
+    }
   & .Info__Left{
     width: 50%;
     height: 100%;
