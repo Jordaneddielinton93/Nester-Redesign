@@ -14,7 +14,7 @@ const Hero = () => {
   return ( 
     <HeroStyled>
       <div className="Hero-title">
-        <h1>A big egg of an opportunity</h1>
+        <h1 className="Hero-title-h1">A big egg of an opportunity</h1>
         <Buttons text="Find Out More"/>
       </div>
       <Bubbles/>

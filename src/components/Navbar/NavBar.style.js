@@ -6,7 +6,7 @@ export const NavBarStyled= styled.nav`
   width: 100vw;
   height:80px;
   background-color: #504c5e;
-  z-index: 10;
+  z-index: 20;
   & .Nav{
     display: flex;
     justify-content: space-between;

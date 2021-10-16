@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const LandingPageStyled = styled.div`
-  width: 100vw;
-  min-height:100vh ;
-  background-color: lightgray;
+  width: 100%;
+  max-width: 100%;
 `

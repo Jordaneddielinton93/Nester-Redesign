@@ -1,43 +1,34 @@
 import styled from "styled-components";
 
 export const HeroStyled = styled.div`
-display: flex;
-  height:100vh ;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   position: relative;
   max-width: 100%;
-  overflow: hidden;
+  min-height: 90vh;
   flex-direction: column;
-
-
-
+  justify-content: space-between;
+  margin-top: 80px;
   & .Hero-title{
-    position: absolute;
-    top:20vh;
     width: 100%;
-    justify-self: center;
+    height: 300px;
     z-index: 10;
     color: #504c5e;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    &-h1{
+      font-size: 3rem;
+    }
   }
 
 
 
   & .heroBackground{
     z-index: 10;
-    width: 100%;
-    max-width: 1200px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0px auto;
-    & #Frametwo{
-      position: relative;
-      
-    }
-
-
+    
     & #bodyandbeak{
       
       animation: fly 3s  forwards ;
@@ -49,11 +40,16 @@ display: flex;
       90% { transform: translate(0px,-10px) }
       100% { opacity:1 }
       }
+      &:hover{
+        animation: shake 2s ease infinite;
+        cursor: pointer;
+      }
 
     }
 
     & #wing{
       animation: shake 2s ease infinite;
+      
     }
     @keyframes shake {
       0%, 100% {transform: translateX(0);}

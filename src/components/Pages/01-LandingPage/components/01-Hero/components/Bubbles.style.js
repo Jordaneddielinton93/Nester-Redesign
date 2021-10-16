@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 export const BubbleStyled = styled.div`
 
-position: relative;
-max-height: 100vh;
-max-width: 100%;
+position: absolute;
+height: 90vh;
+width: 100%;
+max-width: 100vw;
+overflow: hidden;
+top: 0;
 z-index: 1;
 
 @-webkit-keyframes animateBubble {
@@ -207,6 +210,7 @@ z-index: 1;
     height: 200px;
 	position: absolute;
 	width: 200px;
+	display: inline-block;
 }
 
 .bubble:after {

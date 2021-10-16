@@ -1,4 +1,5 @@
-import Hero from "./components/Hero/Hero";
+import Hero from "./components/01-Hero/Hero";
+import Infomation from "./components/02-Infomation/Infomation";
 import { LandingPageStyled } from "./LandingPage.style";
 
 const LandingPage = () => {
@@ -6,6 +7,7 @@ const LandingPage = () => {
   return ( 
     <LandingPageStyled>
       <Hero/>
+      <Infomation/>
     </LandingPageStyled>
    );
 }
