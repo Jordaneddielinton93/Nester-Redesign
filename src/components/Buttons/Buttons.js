@@ -9,7 +9,8 @@ const Buttons = ({text,width,fontsize,border,backColor,Color}) => {
     fontSize:fontsize,
     border:border,
     width: width,
-    color:Color
+    color:Color,
+    cursor:"pointer"
   }
 
   return ( 
