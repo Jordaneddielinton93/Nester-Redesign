@@ -15,7 +15,14 @@ const Hero = () => {
     <HeroStyled>
       <div className="Hero-title">
         <h1 className="Hero-title-h1">A big egg of an opportunity</h1>
-        <Buttons text="Find Out More"/>
+        <Buttons 
+        text="Find Out More" 
+        width="400px" 
+        fontsize="2rem" 
+        border="none"
+        backColor="#8000FF"
+        Color="white"
+        />
       </div>
       <Bubbles/>
       {purplebackground}
