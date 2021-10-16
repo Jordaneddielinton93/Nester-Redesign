@@ -2,7 +2,8 @@ import { HowCanWeHelpStyled } from "./HowCanWeHelp.style";
 
 const HowCanWeHelp = () => {
   return ( 
-    <HowCanWeHelpStyled >
+    <HowCanWeHelpStyled 
+     data-aos="fade-right">
       <section className="Help_Left">
 
       </section>
