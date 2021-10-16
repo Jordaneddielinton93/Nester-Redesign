@@ -8,7 +8,7 @@ width: 100%;
 max-width: 100vw;
 overflow: hidden;
 top: 0;
-z-index: 1;
+z-index: 10;
 
 @-webkit-keyframes animateBubble {
     0% {
