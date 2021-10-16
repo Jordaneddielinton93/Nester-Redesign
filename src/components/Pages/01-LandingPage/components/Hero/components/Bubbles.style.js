@@ -5,7 +5,7 @@ export const BubbleStyled = styled.div`
 position: relative;
 max-height: 100vh;
 max-width: 100%;
-
+z-index: 1;
 
 @-webkit-keyframes animateBubble {
     0% {
@@ -116,9 +116,9 @@ max-width: 100%;
 }
 
 .x5 {
-    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -webkit-animation: animateBubble 18s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 18s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: animateBubble 18s linear infinite, sideWays 4s ease-in-out infinite alternate;
 	
 	left: 30%;
 	top: 50%;
@@ -142,9 +142,9 @@ max-width: 100%;
 }
 
 .x7 {
-    -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -webkit-animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
 	
 	left: 65%;
 	top: 70%;
@@ -203,7 +203,7 @@ max-width: 100%;
     -webkit-box-shadow: 0 20px 30px rgba(236,217,255, 0.8), inset 0px 10px 30px 5px rgba(236,217,255, 1);
 	-moz-box-shadow:  0 20px 30px rgba(236,217,255, 0.8), inset 0px 10px 30px 5px rgba(236,217,255, 1);
 	box-shadow: 0 20px 30px rgba(236,217,255, 0.8), inset 0px 10px 30px 5px rgba(236,217,255, 1);
-	
+	background-color: rgba(236,217,255, 0.8) ;
     height: 200px;
 	position: absolute;
 	width: 200px;
