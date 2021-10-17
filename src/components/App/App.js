@@ -11,6 +11,7 @@ import Aos from 'aos';
 import "aos/dist/aos.css"
 import LandingPage from '../Pages/01-LandingPage/LandingPage';
 import NavBar from '../Navbar/NavBar';
+import SignUp from '../Pages/02-SignUpPage/SignUp';
 function App() {
   useEffect(()=>{
 
@@ -21,7 +22,8 @@ function App() {
       <Router>
         <NavBar/>
         <Switch>
-          <Route component={LandingPage}/>
+          <Route exact path="/" component={LandingPage}/>
+          <Route path="/signup" component={SignUp}/>
         </Switch>
       </Router>
     </div>

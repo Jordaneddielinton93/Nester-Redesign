@@ -1,6 +1,6 @@
 import "./Button.css"
 
-const Buttons = ({text,width,fontsize,border,backColor,Color,backImage}) => {
+const Buttons = ({text,width,fontsize,border,backColor,Color,backImage,fireOnClick}) => {
 
   let buttonStyled={
 
@@ -18,7 +18,7 @@ const Buttons = ({text,width,fontsize,border,backColor,Color,backImage}) => {
   }
 
   return ( 
-    <button style={buttonStyled} id="animatedButton">
+    <button style={buttonStyled} id="animatedButton" onClick={fireOnClick}>
       {text}
     </button>
    );

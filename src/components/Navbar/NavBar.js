@@ -25,7 +25,7 @@ const NavBar = () => {
     <NavBarStyled>
       <div className="Nav">
 
-        <h1 className="Nav__Logo"><Link>nester {EggImg}</Link></h1>
+        <h1 className="Nav__Logo"><Link to="/">nester {EggImg}</Link></h1>
 
         <ul className="Nav__List">
           <li className="Nav__List--item"><Link to="/">Our Offer</Link></li>
@@ -33,7 +33,7 @@ const NavBar = () => {
           <li className="Nav__List--item"><Link to="/">Our Journey</Link></li>
           <li className="Nav__List--item"><Link to="/">Contact</Link></li>
 
-          <li className="Nav__List--signIn"><Link to="/">Sign in</Link></li>
+          <li className="Nav__List--signIn"><Link to="/signup">Sign in</Link></li>
 
         </ul>
       </div>
