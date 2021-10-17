@@ -1,24 +1,36 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavBarStyled } from "./NavBar.style";
 import { Link } from "react-router-dom";
 import { EggImg } from "../images/Egg";
+import { pageContext } from "../App/App";
+import { FcBusinessman } from 'react-icons/fc';
+import { auth } from "../FireBase/FireBase";
+import { signOut } from "firebase/auth"
 const NavBar = () => {
 
+  let userID= useContext(pageContext)
+  // const [offSetY,setOffsetY] = useState(0)
 
-  const [offSetY,setOffsetY] = useState(0)
 
+  // const handleScroll = () => setOffsetY(window.pageYOffset);
 
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  // useEffect(()=>{
 
-  useEffect(()=>{
+  // window.addEventListener("scroll",handleScroll);
 
-  window.addEventListener("scroll",handleScroll);
+  // return () => window.removeEventListener("scroll",handleScroll);
 
-  return () => window.removeEventListener("scroll",handleScroll);
+  // },[])
 
-  },[])
-
-  console.log(offSetY)
+  // console.log(offSetY)
+  function signout(){
+    signOut(auth).then(() => {
+      // Sign-out successful.
+    }).catch((error) => {
+      // An error happened.
+    })
+  }
+  let [onHoverSignOut,setOnHoverSignOut]=useState(true)
 
 
   return ( 
@@ -33,7 +45,30 @@ const NavBar = () => {
           <li className="Nav__List--item"><Link to="/">Our Journey</Link></li>
           <li className="Nav__List--item"><Link to="/">Contact</Link></li>
 
-          <li className="Nav__List--signIn"><Link to="/signup">Sign in</Link></li>
+          
+          
+            {userID?
+            <li className="Nav__List--signIn"
+             onClick={signout}
+             onMouseEnter={()=>setOnHoverSignOut(!onHoverSignOut)}
+             onMouseLeave={()=>setOnHoverSignOut(!onHoverSignOut)}
+              style={{
+              backgroundColor:"#cfffcf",
+              fontSize:!onHoverSignOut&&"1.5rem",
+              width:"100px",
+              textAlign:"center",
+              cursor: "pointer"
+            }}>
+              {onHoverSignOut?"Sign out ?":<FcBusinessman />}
+            
+            </li>
+            :
+              <li className="Nav__List--signIn">
+                <Link to="/signin">Sign in</Link>
+              </li>
+              }
+            
+            
 
         </ul>
       </div>

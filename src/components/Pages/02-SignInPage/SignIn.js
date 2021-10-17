@@ -1,38 +1,37 @@
 import Buttons from "../../Buttons/Buttons";
 import Bubbles from "../01-LandingPage/components/01-Hero/components/Bubbles";
-import { SignUpStyled } from "./SignUp.style";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../FireBase/FireBase";
 import { useRef, useState} from "react";
-import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { SignUpStyled } from "../02-SignUpPage/SignUp.style";
+import { Link, useHistory } from "react-router-dom";
 
-const SignUp = () => {
-  let history = useHistory();
+const SignIn = () => {
+let history = useHistory()
 let email = useRef()
 let password = useRef()
 let [errorMsg,setErrorMsg]=useState(false)
   
-function validateUser(e){
+function SigninUser(e){
 
-  createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+  signInWithEmailAndPassword(auth, email.current.value, password.current.value)
   
     .then((userCredential) => {
-      console.log(userCredential)
+      
 
       // Signed in 
-      history.push("/")
-      // setShowSate(user)
+  
+      history.push("/");
       // ...
     })
     .catch((error) => {
       const errorMessage = error.message;
-      if(errorMessage.includes("already-in-use")){
-        setErrorMsg("email already in use")
-      }else if(errorMessage.includes("auth/weak-password")){
-        setErrorMsg("weak password minimum 6 characters")
-      }else if(errorMessage.includes("auth/invalid-email")){
-        setErrorMsg("invalid-email")
+      console.log(errorMessage)
+      if(errorMessage.includes("auth/invalid-email")){
+        setErrorMsg("invalid email")
+      }else if(errorMessage.includes("auth/wrong-password")){
+        setErrorMsg("invalid password")
       }else{
         setErrorMsg(errorMessage)
       }
@@ -48,7 +47,7 @@ function validateUser(e){
     <SignUpStyled>
 
       <div className="signForm">
-        <h1 className="signForm--title">Sign Up</h1>
+        <h1 className="signForm--title">Sign In </h1>
         <label 
         className="signForm__label"
         htmlFor="email">
@@ -82,14 +81,14 @@ function validateUser(e){
             backColor="#8000FF"
             backImage="linear-gradient(to right, #bd7aff 0%, white  51%, #870fff  100%)"
             Color="white"
-            fireOnClick={validateUser}
+            fireOnClick={SigninUser}
            />
 
-        <h2>Dont have an account ? <Link to="./signin">Sign in</Link></h2>
+        <h2>Dont have an account ? <Link to="./signup">Sign up</Link></h2>
       </div>
       <Bubbles/>
     </SignUpStyled>
    );
 }
  
-export default SignUp;
+export default SignIn;
