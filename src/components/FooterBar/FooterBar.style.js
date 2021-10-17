@@ -13,6 +13,7 @@ export const FooterBarStyled = styled.footer`
     width: 1200px;
     height: 100%;
     color: white;
+    margin: 0px auto;
     @media only screen and (max-width: 1199px) {
       width: 100%;
     }
