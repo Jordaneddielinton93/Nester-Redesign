@@ -1,4 +1,6 @@
-const Buttons = ({text,width,fontsize,border,backColor,Color}) => {
+import "./Button.css"
+
+const Buttons = ({text,width,fontsize,border,backColor,Color,backImage}) => {
 
   let buttonStyled={
 
@@ -10,11 +12,13 @@ const Buttons = ({text,width,fontsize,border,backColor,Color}) => {
     border:border,
     width: width,
     color:Color,
-    cursor:"pointer"
+    backgroundImage:backImage,
+    cursor:"pointer",
+    zIndex:20
   }
 
   return ( 
-    <button style={buttonStyled}>
+    <button style={buttonStyled} id="animatedButton">
       {text}
     </button>
    );

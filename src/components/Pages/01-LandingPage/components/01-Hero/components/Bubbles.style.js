@@ -5,10 +5,14 @@ export const BubbleStyled = styled.div`
 position: absolute;
 height: 90vh;
 width: 100%;
-max-width: 100vw;
+max-width: 100%;
+max-height: 100%;
 overflow: hidden;
 top: 0;
-z-index: 10;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 5;
 
 @-webkit-keyframes animateBubble {
     0% {

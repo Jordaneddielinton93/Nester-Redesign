@@ -1,0 +1,11 @@
+#animatedButton{
+    transition: 1s;
+    background-size: 300% auto;
+    display: block;
+    background-position: left center; /* change the direction of the change here */
+
+}
+#animatedButton:hover{
+  background-position: right center; /* change the direction of the change here */
+  
+}

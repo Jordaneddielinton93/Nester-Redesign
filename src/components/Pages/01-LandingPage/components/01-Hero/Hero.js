@@ -19,8 +19,9 @@ const Hero = () => {
         text="Find Out More" 
         width="400px" 
         fontsize="2rem" 
-        border="none"
+        border="inset 3px white"
         backColor="#8000FF"
+        backImage="linear-gradient(to right, #bd7aff 0%, #870fff  51%, #870fff  100%)"
         Color="white"
         />
       </div>
@@ -31,3 +32,6 @@ const Hero = () => {
 }
  
 export default Hero;
+
+
+
