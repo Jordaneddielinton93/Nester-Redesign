@@ -30,7 +30,7 @@ const NavBar = () => {
       // An error happened.
     })
   }
-  let [onHoverSignOut,setOnHoverSignOut]=useState(true)
+  let [onHoverSignOut,setOnHoverSignOut]=useState(false)
 
 
   return ( 
