@@ -5,6 +5,8 @@ import HowCanWeHelp from "./components/04-HowCanWeHelp/HowCanWeHelp";
 import { LandingPageStyled } from "./LandingPage.style";
 import meetingImg from "../../images/meetingIMG.png"
 import WhoeAreWe from "./components/05-WhoAreWe/WhoAreWe";
+import FooterBar from "../../FooterBar/FooterBar";
+import Founders from "./components/05-Founders/Founders";
 
 const LandingPage = () => {
 
@@ -16,7 +18,8 @@ const LandingPage = () => {
       <HowCanWeHelp/>
       <img alt="" width="100%" srcset={meetingImg}  />
       <WhoeAreWe/>
-      
+      <Founders/>
+      <FooterBar/>
     </LandingPageStyled>
    );
 }

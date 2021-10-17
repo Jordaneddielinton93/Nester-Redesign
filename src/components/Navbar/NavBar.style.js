@@ -14,9 +14,8 @@ export const NavBarStyled= styled.nav`
     width: 1200px;
     height: 100%;
     margin: 0px auto;
-    @media only screen and (max-width: 1197px) {
+    @media only screen and (max-width: 1199px) {
       width: 100%;
-      
     }
     & a{
         color:#00CFEB ;
