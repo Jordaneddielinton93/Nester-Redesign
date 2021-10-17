@@ -14,7 +14,7 @@ const LandingPage = () => {
       <Infomation />
       <OurOffer/>
       <HowCanWeHelp/>
-      <img alt="" width="100%" srcset={meetingImg} />
+      <img alt="" width="100%" srcset={meetingImg}  />
       <WhoeAreWe/>
       
     </LandingPageStyled>
