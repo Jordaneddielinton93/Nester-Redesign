@@ -6,7 +6,7 @@ import { LandingPageStyled } from "./LandingPage.style";
 import meetingImg from "../../images/meetingIMG.png"
 import WhoeAreWe from "./components/05-WhoAreWe/WhoAreWe";
 import FooterBar from "../../FooterBar/FooterBar";
-import Founders from "./components/05-Founders/Founders";
+import Founders from "./components/06-Founders/Founders";
 
 const LandingPage = () => {
 
