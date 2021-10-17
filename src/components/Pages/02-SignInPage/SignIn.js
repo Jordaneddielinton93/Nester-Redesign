@@ -13,8 +13,8 @@ let email = useRef()
 let password = useRef()
 let [errorMsg,setErrorMsg]=useState(false)
   
-function SigninUser(e){
-
+function SigninUser(e){ 
+  e.preventDefault()
   signInWithEmailAndPassword(auth, email.current.value, password.current.value)
   
     .then((userCredential) => {
@@ -46,7 +46,7 @@ function SigninUser(e){
   return ( 
     <SignUpStyled>
 
-      <div className="signForm">
+      <form className="signForm">
         <h1 className="signForm--title">Sign In </h1>
         <label 
         className="signForm__label"
@@ -63,7 +63,7 @@ function SigninUser(e){
           <h1 className="signForm__label--title" >Password</h1>
 
           <input className="signForm__label--input" ref={password}
-           type="password" />
+           type="password" id="Password" />
           {errorMsg && <h3 style={{
             textAlign:"center",
             color:"red",
@@ -85,7 +85,7 @@ function SigninUser(e){
            />
 
         <h2>Dont have an account ? <Link to="./signup">Sign up</Link></h2>
-      </div>
+      </form>
       <Bubbles/>
     </SignUpStyled>
    );
